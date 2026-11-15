@@ -12,6 +12,18 @@
 ```
 Correlação: atributos `corr_id`, `run_id` e `seq` copiados da requisição para a resposta.
 
+### Pré-requisitos (em cada PC)
+- Python 3.9+
+- **Google Cloud CLI (`gcloud`)** — não vem pelo pip:
+  - Windows: `winget install Google.CloudSDK` (ou instalador em cloud.google.com/sdk/docs/install)
+  - Linux/macOS: ver cloud.google.com/sdk/docs/install
+  - Reabra o terminal e confira com `gcloud --version`
+- Git Bash ou WSL no Windows, para rodar os `.sh`
+
+### Autenticação
+gcloud init                              # login do gcloud (usado pelo setup.sh)
+gcloud auth application-default login    # credencial da biblioteca Python
+
 ## 1. Preparação (uma vez, em cada PC)
 ```bash
 pip install -r requirements.txt
