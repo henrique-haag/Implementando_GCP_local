@@ -42,7 +42,7 @@ baseline, rate, payload, workers, fault). Tabela de comandos PC A × PC B no REA
   se não, o gargalo é o gerador em Python, não o Pub/Sub.
 - Worker devolve `proc_ms` → `overhead_ms = RTT − proc_ms` isola o custo do middleware.
 - Tarefas: `echo` (só middleware), `primes` (CPU), `sleep` (custo previsível).
-- Metodologia: 3 repetições por ponto (média ± desvio), 20 primeiras requisições descartadas (warm-up).
+- Metodologia: 3 repetições por ponto (média ± desvio), requisições enviadas nos primeiros 10 s descartadas (warm-up, `--warmup-s`); durações já incluem esses 10 s.
 - Client ignora respostas com `run_id` diferente (sobras de execuções anteriores).
 
 ## Convenções

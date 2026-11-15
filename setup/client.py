@@ -4,7 +4,7 @@ Todo o RTT e medido com o MESMO relogio (time.perf_counter do PC A),
 portanto nao depende de sincronizacao entre os computadores.
 
 Exemplo:
-  python setup/client.py --scenario rate --param 100 --rate 100 --duration 60
+  python setup/client.py --scenario rate --param 100 --rate 100 --duration 70 --warmup-s 10
 """
 import argparse
 import csv
@@ -30,14 +30,15 @@ def main():
     p.add_argument("--param", type=float, default=0, help="valor do parametro variado (eixo X)")
     p.add_argument("--rep", type=int, default=1, help="numero da repeticao")
     p.add_argument("--rate", type=float, default=10, help="requisicoes por segundo")
-    p.add_argument("--duration", type=float, default=60, help="duracao do envio (s)")
+    p.add_argument("--duration", type=float, default=70, help="duracao do envio (s), inclui o warm-up")
     p.add_argument("--task", default="echo", choices=["echo", "primes", "sleep"])
     p.add_argument("--n", type=int, default=100000, help="limite do crivo (task=primes)")
     p.add_argument("--ms", type=int, default=50, help="tempo de espera (task=sleep)")
     p.add_argument("--payload", type=int, default=100, help="bytes de padding na requisicao")
     p.add_argument("--batch", type=int, default=1, help="max_messages do batch do publisher")
     p.add_argument("--batch-latency", type=float, default=0.05, help="max_latency do batch (s)")
-    p.add_argument("--warmup", type=int, default=20, help="primeiras N requisicoes descartadas")
+    p.add_argument("--warmup-s", type=float, default=10,
+                   help="descarta requisicoes enviadas nos primeiros S segundos (t_send < S)")
     p.add_argument("--timeout", type=float, default=30, help="espera por respostas apos o fim do envio (s)")
     p.add_argument("--outdir", default="results")
     a = p.parse_args()
@@ -101,7 +102,11 @@ def main():
     subscriber.close()
 
     # ---------- estatisticas ----------
-    valid = range(min(a.warmup, total), total)
+    # warm-up por tempo: usa o instante real de envio (t_send - t0), nao a contagem
+    is_warm = [t_send[i] - t0 < a.warmup_s for i in range(total)]
+    valid = [i for i in range(total) if not is_warm[i]]
+    if not valid:
+        print(f"AVISO: --duration ({a.duration}s) <= --warmup-s ({a.warmup_s}s); nada a medir", flush=True)
     got = [i for i in valid if i in recv]
     rtt = np.array([(recv[i][0] - t_send[i]) * 1000 for i in got])
     proc = np.array([recv[i][1] for i in got])
@@ -111,7 +116,8 @@ def main():
 
     row = dict(
         scenario=a.scenario, param=a.param, rep=a.rep, rate=a.rate, task=a.task, n=a.n,
-        ms=a.ms, payload=a.payload, batch=a.batch, sent=len(valid), received=len(got),
+        ms=a.ms, payload=a.payload, batch=a.batch, warmup_s=a.warmup_s,
+        sent=len(valid), received=len(got),
         lost=lost, dups=dups[0], pub_errors=pub_errors,
         real_send_rate=round(total / (t_end_send - t0), 2),
         throughput=round(len(got) / span, 2) if got else 0,
@@ -128,7 +134,7 @@ def main():
         w = csv.writer(f)
         w.writerow(["seq", "warmup", "t_send", "t_recv", "rtt_ms", "proc_ms", "worker"])
         for i in range(total):
-            ws = int(i < a.warmup)
+            ws = int(is_warm[i])
             if i in recv:
                 tr, pm, wk = recv[i]
                 w.writerow([i, ws, round(t_send[i] - t0, 6), round(tr - t0, 6),
