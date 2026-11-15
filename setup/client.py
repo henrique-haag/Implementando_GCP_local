@@ -4,7 +4,7 @@ Todo o RTT e medido com o MESMO relogio (time.perf_counter do PC A),
 portanto nao depende de sincronizacao entre os computadores.
 
 Exemplo:
-  python client.py --scenario rate --param 100 --rate 100 --duration 60
+  python setup/client.py --scenario rate --param 100 --rate 100 --duration 60
 """
 import argparse
 import csv

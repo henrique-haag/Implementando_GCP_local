@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # Rodar no PC A. Cada cenario e repetido REPS vezes (padrao 3).
-# Uso: ./run_scenarios.sh <cenario> [parametro]
+# Uso (da raiz do repo ou de qualquer pasta): ./batch_files/run_scenarios.sh <cenario> [parametro]
+cd "$(dirname "$0")/.." || exit 1   # raiz do repo: results/ fica sempre no mesmo lugar
 REPS=${REPS:-3}
 DUR=${DUR:-60}
 
 run() {  # run <cenario> <param> <args do client...>
   local sc=$1 param=$2; shift 2
   for r in $(seq "$REPS"); do
-    python client.py --scenario "$sc" --param "$param" --rep "$r" --duration "$DUR" "$@"
+    python setup/client.py --scenario "$sc" --param "$param" --rep "$r" --duration "$DUR" "$@"
     sleep 5   # deixa o backlog esvaziar entre repeticoes
   done
 }

@@ -1,9 +1,9 @@
 """Worker (rodar no PC B): consome requisicoes, processa e publica a resposta.
 
 Exemplos:
-  python worker.py --procs 4 --threads 1          # 4 processos, 1 thread cada
-  python worker.py --procs 1 --threads 4 --crash-after 300   # falha injetada
-  python worker.py --procs 2 --fail-rate 0.2      # nack aleatorio (teste de DLQ)
+  python setup/worker.py --procs 4 --threads 1          # 4 processos, 1 thread cada
+  python setup/worker.py --procs 1 --threads 4 --crash-after 300   # falha injetada
+  python setup/worker.py --procs 2 --fail-rate 0.2      # nack aleatorio (teste de DLQ)
 """
 import argparse
 import json

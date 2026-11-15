@@ -1,5 +1,5 @@
 """Gera tabela (markdown/CSV) e graficos a partir de results/.
-Uso: python analyze.py [pasta_resultados]
+Uso (da raiz do repo): python setup/analyze.py [pasta_resultados]
 """
 import glob
 import os

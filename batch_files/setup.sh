@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Cria topicos, subscriptions e dead letter topic. Rodar uma vez.
-# Uso: GCP_PROJECT=meu-projeto ./setup.sh [ACK_DEADLINE_SEGUNDOS]
+# Uso: GCP_PROJECT=meu-projeto ./batch_files/setup.sh [ACK_DEADLINE_SEGUNDOS]
 set -euo pipefail
 P=${GCP_PROJECT:?defina GCP_PROJECT}
 ACK=${1:-10}
