@@ -34,7 +34,7 @@ case "$1" in
   # $2 = numero de processos worker ligados (workers com --threads 1 => ~10 req/s cada)
   workers)  DUR=40 run workers "$2" --rate 80 --task sleep --ms 100 ;;
   # $2 = 1 (tudo no PC A) ou 2 (client no A, workers no B)
-  topology) run topology "$2" --rate 50 ;;
+  topology) run topology "$2" --rate 20 ;;
   # $2 = ack deadline configurado (s). Matar/derrubar um worker durante a execucao.
   fault)    DUR=100 REPS=1 run fault "$2" --rate 20 --task sleep --ms 100 --timeout 60 ;;
   # $2 = taxa de nack usada nos workers (ex.: 0.2)
