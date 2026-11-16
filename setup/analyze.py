@@ -10,7 +10,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # raiz do repo
 R = sys.argv[1] if len(sys.argv) > 1 else "results"
+if not os.path.isdir(R) and os.path.isdir(os.path.join(ROOT, R)):
+    R = os.path.join(ROOT, R)    # caminho relativo a raiz do repo (ex.: rodando de dentro de setup/)
+if not os.path.exists(os.path.join(R, "summary.csv")):
+    sys.exit(f"Nao achei {os.path.join(R, 'summary.csv')}. Rode os cenarios antes ou passe a pasta certa.")
 df = pd.read_csv(os.path.join(R, "summary.csv"))
 
 METRICS = ["mean_ms", "p50_ms", "p95_ms", "p99_ms", "throughput", "lost", "dups", "overhead_ms"]
@@ -27,7 +32,8 @@ for (sc, par), r in g.iterrows():
 header = ["Cenário", "Param"] + METRICS
 md = ["| " + " | ".join(header) + " |", "|" + "---|" * len(header)]
 md += ["| " + " | ".join(c) + " |" for c in rows]
-open(os.path.join(R, "tabela.md"), "w").write("\n".join(md))
+with open(os.path.join(R, "tabela.md"), "w", encoding="utf-8") as fh:
+    fh.write("\n".join(md))
 g.to_csv(os.path.join(R, "tabela.csv"))
 print("\n".join(md))
 

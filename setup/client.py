@@ -40,7 +40,9 @@ def main():
     p.add_argument("--warmup-s", type=float, default=10,
                    help="descarta requisicoes enviadas nos primeiros S segundos (t_send < S)")
     p.add_argument("--timeout", type=float, default=30, help="espera por respostas apos o fim do envio (s)")
-    p.add_argument("--outdir", default="results")
+    p.add_argument("--outdir", default=os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results"),
+        help="pasta de saida (padrao: results/ na raiz do repo)")
     a = p.parse_args()
     os.makedirs(a.outdir, exist_ok=True)
 

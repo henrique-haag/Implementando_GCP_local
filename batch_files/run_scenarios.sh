@@ -5,10 +5,22 @@ cd "$(dirname "$0")/.." || exit 1   # raiz do repo: results/ fica sempre no mesm
 REPS=${REPS:-3}
 DUR=${DUR:-70}   # inclui 10 s de warm-up (--warmup-s do client)
 
+P=${GCP_PROJECT:?defina GCP_PROJECT}
+
+purge() {  # descarta (marca como ack) tudo que ainda estiver nas subscriptions
+  local now
+  now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+  for s in rpc-requests-sub rpc-replies-sub; do
+    gcloud pubsub subscriptions seek "$s" --time="$now" --project "$P" \
+      || echo "AVISO: seek em $s falhou; sobras serao ignoradas pelo run_id" >&2
+  done
+}
+
 run() {  # run <cenario> <param> <args do client...>
   local sc=$1 param=$2; shift 2
   for r in $(seq "$REPS"); do
     python setup/client.py --scenario "$sc" --param "$param" --rep "$r" --duration "$DUR" "$@"
+    purge
     sleep 5   # deixa o backlog esvaziar entre repeticoes
   done
 }
@@ -17,7 +29,7 @@ case "$1" in
   baseline) run baseline 10 --rate 10 ;;
   rate)     for x in 10 50 100 200 500; do run rate $x --rate $x; done ;;
   payload)  for x in 100 1000 10000 100000; do run payload $x --rate 20 --payload $x; done ;;
-  cost)     for x in 10000 100000 1000000 5000000; do run cost $x --rate 5 --task primes --n $x; done ;;
+  cost)     for x in 10000 100000 1000000 5000000; do run cost $x --rate 2 --task primes --n $x; done ;;
   batch)    for x in 1 10 100; do run batch $x --rate 500 --batch $x; done ;;
   # $2 = numero de processos worker ligados (workers com --threads 1 => ~10 req/s cada)
   workers)  DUR=40 run workers "$2" --rate 80 --task sleep --ms 100 ;;

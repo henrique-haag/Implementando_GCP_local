@@ -43,7 +43,7 @@ No PC A (uma vez): `./batch_files/setup.sh 10`  (10 = ack deadline em segundos).
 | baseline | `python setup/worker.py --procs 1 --threads 4` | `baseline` |
 | rate | idem | `rate` |
 | payload | idem | `payload` |
-| cost | `python setup/worker.py --procs 1 --threads 1` | `cost` |
+| cost | `python setup/worker.py --procs 1 --threads 1` | `cost` (2 req/s; `--n` = 10⁴, 10⁵, 10⁶, 5·10⁶) |
 | batch | idem baseline | `batch` |
 | workers | `python setup/worker.py --procs K --threads 1` (K = 1, 2, 4, 8) | `workers K` |
 | topology | K=1: tudo no PC A; K=2: workers no PC B | `topology 1` / `topology 2` |
