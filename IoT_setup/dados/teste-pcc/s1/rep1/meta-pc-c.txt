@@ -1,0 +1,51 @@
+pc: pc-c
+cenario: teste | run_id: s1 | rep: 1 | taxa: 10 | duracao: 20
+hostname: user-Aspire-E5-573
+so: Linux user-Aspire-E5-573 7.0.0-43-generic #43~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Sat Oct 31 06:52:47 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+distro: Linux Mint 22.3
+python: Python 3.12.3
+inicio (utc): 2026-11-17T05:53:28Z
+
+== offset do relogio (inicio) ==
+System time     : 0.000402644 seconds fast of NTP time
+
+== pip freeze ==
+certifi==2026.10.23
+cffi==2.1.1
+charset-normalizer==3.5.2
+contourpy==1.4.0
+cryptography==50.0.2
+cycler==0.12.1
+fonttools==4.68.0
+google-api-core==2.44.0
+google-auth==2.62.2
+google-cloud-pubsub==2.44.0
+googleapis-common-protos==1.76.0
+grpc-google-iam-v1==0.14.6
+grpcio==1.85.1
+grpcio-status==1.85.1
+idna==3.20
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.5
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
+opentelemetry-semantic-conventions==0.66b2
+packaging==26.3
+pandas==3.1.1
+pillow==13.0.0
+proto-plus==1.29.0
+protobuf==7.36.2
+pyasn1==0.6.5
+pyasn1_modules==0.4.2
+pycparser==3.12
+pyparsing==3.3.3
+python-dateutil==4.0.0
+requests==2.34.2
+typing_extensions==4.16.0
+tzdata==2026.6
+urllib3==2.8.0
+
+fim (utc): 2026-11-17T05:54:45Z
+== offset do relogio (fim) ==
+System time     : 0.000338609 seconds fast of NTP time
