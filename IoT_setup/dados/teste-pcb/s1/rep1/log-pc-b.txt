@@ -1,0 +1,24 @@
+/home/user/Documents/repos/.gcp_2/lib/python3.12/site-packages/google/auth/_default.py:113: UserWarning: Your application has authenticated using end user credentials from Google Cloud SDK without a quota project. You might receive a "quota exceeded" or "API not enabled" error. See the following page for troubleshooting: https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds. 
+  warnings.warn(_CLOUD_SDK_CREDENTIALS_WARNING)
+[02:53:29] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-b-ambiente
+[02:53:29] pc-b | run_id=s1 cenario=teste rep=1 -> /home/user/Documents/repos/Implementando_GCP_local/IoT_setup/dados/teste/s1/rep1/pc-b.csv
+[02:53:29] Aguardando a primeira mensagem (idle-timeout de 15 s comeca a contar nela; Ctrl+C para sair)
+[02:53:34] recebidas: sub-b-ambiente=0
+[02:53:39] recebidas: sub-b-ambiente=0
+[02:53:44] recebidas: sub-b-ambiente=0
+[02:53:49] recebidas: sub-b-ambiente=0
+[02:53:54] recebidas: sub-b-ambiente=0
+[02:53:59] recebidas: sub-b-ambiente=0
+[02:54:04] recebidas: sub-b-ambiente=0
+[02:54:09] recebidas: sub-b-ambiente=0
+[02:54:14] recebidas: sub-b-ambiente=15
+[02:54:19] recebidas: sub-b-ambiente=32
+[02:54:24] recebidas: sub-b-ambiente=49
+[02:54:29] recebidas: sub-b-ambiente=66
+[02:54:34] recebidas: sub-b-ambiente=67
+[02:54:39] recebidas: sub-b-ambiente=67
+[02:54:44] recebidas: sub-b-ambiente=67
+[02:54:45] Encerrado (idle-timeout).
+[02:54:45]   sub-b-ambiente: 67 mensagens gravadas
+[02:54:45]   ignoradas (outro run_id): 0
+[02:54:45]   CSV: /home/user/Documents/repos/Implementando_GCP_local/IoT_setup/dados/teste/s1/rep1/pc-b.csv (67 linhas)

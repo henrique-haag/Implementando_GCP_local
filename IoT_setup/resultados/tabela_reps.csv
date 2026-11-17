@@ -1,0 +1,2 @@
+cenario,run_id,rep,pc,assinatura,topico,publicadas,recebidas,perdas,perdas_pct,duplicatas,desconhecidas,vazao,lat_media,lat_p50,lat_p95,lat_p99,a_nuvem_p50,nuvem_pc_p50
+teste,t1,1,pc-b,sub-b-ambiente,ambiente,50,50,0,0.0,0,0,5.011734266214822,63.1760205078125,56.673583984375,111.37696533203119,125.45176025390623,201.6256103515625,-144.5306396484375
