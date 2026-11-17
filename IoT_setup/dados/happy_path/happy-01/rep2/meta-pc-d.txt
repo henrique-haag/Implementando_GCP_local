@@ -1,0 +1,51 @@
+pc: pc-d
+cenario: happy_path | run_id: happy-01 | rep: 2 | taxa: 20 | duracao: 70
+hostname: cachyos-x8664-haagen
+so: Linux cachyos-x8664-haagen 7.3.0-4-cachyos #1 SMP PREEMPT_DYNAMIC Fri, 23 Oct 2026 15:03:58 +0000 x86_64 GNU/Linux
+distro: CachyOS
+python: Python 3.14.8
+inicio (utc): 2026-11-17T06:54:43Z
+
+== offset do relogio (inicio) ==
+System time     : 0.001358431 seconds fast of NTP time
+
+== pip freeze ==
+certifi==2026.10.23
+cffi==2.1.1
+charset-normalizer==3.5.2
+contourpy==1.4.0
+cryptography==50.0.2
+cycler==0.12.1
+fonttools==4.68.0
+google-api-core==2.44.0
+google-auth==2.62.2
+google-cloud-pubsub==2.44.0
+googleapis-common-protos==1.76.0
+grpc-google-iam-v1==0.14.6
+grpcio==1.85.1
+grpcio-status==1.85.1
+idna==3.20
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.5
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
+opentelemetry-semantic-conventions==0.66b2
+packaging==26.3
+pandas==3.1.1
+pillow==13.0.0
+proto-plus==1.29.0
+protobuf==7.36.2
+pyasn1==0.6.5
+pyasn1_modules==0.4.2
+pycparser==3.12
+pyparsing==3.3.3
+python-dateutil==4.0.0
+requests==2.34.2
+typing_extensions==4.16.0
+tzdata==2026.6
+urllib3==2.8.0
+
+fim (utc): 2026-11-17T06:57:05Z
+== offset do relogio (fim) ==
+System time     : 0.001250402 seconds slow of NTP time
