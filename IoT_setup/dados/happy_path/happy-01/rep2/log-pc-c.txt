@@ -1,0 +1,36 @@
+/home/user/Documents/repos/.gcp_2/lib/python3.12/site-packages/google/auth/_default.py:113: UserWarning: Your application has authenticated using end user credentials from Google Cloud SDK without a quota project. You might receive a "quota exceeded" or "API not enabled" error. See the following page for troubleshooting: https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds. 
+  warnings.warn(_CLOUD_SDK_CREDENTIALS_WARNING)
+[03:54:45] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-c-gases
+[03:54:45] pc-c | run_id=happy-01 cenario=happy_path rep=2 -> /home/user/Documents/repos/Implementando_GCP_local/IoT_setup/dados/happy_path/happy-01/rep2/pc-c.csv
+[03:54:45] Aguardando a primeira mensagem (idle-timeout de 15 s comeca a contar nela; Ctrl+C para sair)
+[03:54:50] recebidas: sub-c-gases=0
+[03:54:55] recebidas: sub-c-gases=0
+[03:55:00] recebidas: sub-c-gases=0
+[03:55:05] recebidas: sub-c-gases=0
+[03:55:10] recebidas: sub-c-gases=0
+[03:55:15] recebidas: sub-c-gases=0
+[03:55:20] recebidas: sub-c-gases=0
+[03:55:25] recebidas: sub-c-gases=0
+[03:55:30] recebidas: sub-c-gases=0
+[03:55:35] recebidas: sub-c-gases=0
+[03:55:40] recebidas: sub-c-gases=0
+[03:55:45] recebidas: sub-c-gases=41
+[03:55:50] recebidas: sub-c-gases=74
+[03:55:55] recebidas: sub-c-gases=108
+[03:56:00] recebidas: sub-c-gases=141
+[03:56:05] recebidas: sub-c-gases=174
+[03:56:10] recebidas: sub-c-gases=208
+[03:56:15] recebidas: sub-c-gases=241
+[03:56:20] recebidas: sub-c-gases=274
+[03:56:25] recebidas: sub-c-gases=308
+[03:56:30] recebidas: sub-c-gases=341
+[03:56:35] recebidas: sub-c-gases=374
+[03:56:40] recebidas: sub-c-gases=408
+[03:56:45] recebidas: sub-c-gases=441
+[03:56:50] recebidas: sub-c-gases=471
+[03:56:55] recebidas: sub-c-gases=471
+[03:57:00] recebidas: sub-c-gases=471
+[03:57:05] Encerrado (idle-timeout).
+[03:57:05]   sub-c-gases: 471 mensagens gravadas
+[03:57:05]   ignoradas (outro run_id): 0
+[03:57:05]   CSV: /home/user/Documents/repos/Implementando_GCP_local/IoT_setup/dados/happy_path/happy-01/rep2/pc-c.csv (471 linhas)
