@@ -17,7 +17,7 @@ import uuid
 import numpy as np
 from google.cloud import pubsub_v1
 
-import common
+import test_setup.setup.common as common
 
 
 def pct(x, q):

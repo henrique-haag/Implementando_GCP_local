@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor
 from google.cloud import pubsub_v1
 from google.cloud.pubsub_v1.subscriber.scheduler import ThreadScheduler
 
-import common
+import test_setup.setup.common as common
 
 
 def count_primes(n):
