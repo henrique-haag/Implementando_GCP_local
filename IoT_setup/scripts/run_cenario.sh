@@ -2,7 +2,8 @@
 # Logica comum de run_baseline.sh e run_happy_path.sh: roda as repeticoes de um cenario em um PC.
 # Uso: bash scripts/run_cenario.sh <cenario> <taxa> <pc-a|pc-b|pc-c|pc-d> <run_id>
 #
-# Variaveis opcionais: REPS (3), DURACAO (70), IDLE_TIMEOUT (15), PAUSA (IDLE_TIMEOUT + 15).
+# Variaveis opcionais: REPS (3), DURACAO (70), IDLE_TIMEOUT (15), PAUSA (IDLE_TIMEOUT + 15),
+# ESPERA_SEEK (10 s entre o seek e o inicio da publicacao).
 # Consumidores (pc-b/c/d): rodam uma repeticao atras da outra; cada uma termina pelo idle-timeout.
 # Produtor (pc-a): antes de cada repeticao faz seek das 4 assinaturas para "agora" e, entre
 # repeticoes, espera PAUSA s para os consumidores fecharem a anterior e abrirem a proxima.
@@ -21,6 +22,7 @@ REPS="${REPS:-3}"
 DURACAO="${DURACAO:-70}"
 IDLE_TIMEOUT="${IDLE_TIMEOUT:-15}"
 PAUSA="${PAUSA:-$((IDLE_TIMEOUT + 15))}"
+ESPERA_SEEK="${ESPERA_SEEK:-10}"
 ASSINATURAS=(sub-b-ambiente sub-c-gases sub-d-gases sub-d-eventos)   # repete src/common.py
 
 RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -108,6 +110,10 @@ seek_assinaturas() {
         gcloud pubsub subscriptions seek "$sub" --time="$agora" --project="$GCP_PROJECT" >/dev/null
         echo "  $sub ok"
     done
+    # O seek se propaga de forma assincrona: publicando logo em seguida, as primeiras mensagens
+    # recebiam ack e depois eram reentregues (duplicatas nos ~3 s iniciais do teste s1).
+    echo "Aguardando ${ESPERA_SEEK} s para o seek se propagar..."
+    sleep "$ESPERA_SEEK"
 }
 
 # ---------------------------------------------------------------- execucao

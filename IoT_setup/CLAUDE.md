@@ -133,6 +133,15 @@ bash IoT_setup/scripts/teardown.sh           # ao terminar
 - O PC B é uma VM dentro do PC A: divide CPU, rede e host com o produtor.
 - O PC C está no Wi-Fi 2,4 GHz; os outros no 5 GHz. A comparação C × D em `gases` mostra o efeito da rede.
 - Uma única conta Google em todos os PCs.
+- Medido no teste `teste/s1` (2026-11-17), mantido como está por decisão do grupo:
+  - Relógio do PC A (w32time) ~137 ms atrasado em relação ao `time.google.com`: infla em ~137 ms toda
+    latência medida a partir do A (p50 de B/C deu ~200 ms; o real deve estar perto de 63 ms) e distorce a
+    separação A→nuvem / nuvem→PC. B e C (chrony) ficaram abaixo de 1 ms.
+  - PC D com nuvem→PC ~159 ms contra ~44 ms do C, mesmo estando no 5 GHz (causa não investigada;
+    suspeita: economia de energia do Wi-Fi). Afeta a leitura da comparação C × D em `gases`.
+  - Relógio do PC D (chrony) entre −7 e −10 ms, pior que B e C.
+- O `seek` das assinaturas se propaga de forma assíncrona: publicar logo em seguida gerou reentregas nos
+  primeiros ~3 s (por isso o `run_cenario.sh` espera `ESPERA_SEEK` = 10 s antes de publicar).
 
 ## Convenções
 - Código e comentários em português, sem acentos nos identificadores.
