@@ -1,0 +1,24 @@
+[02:53:27] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-d-gases
+[02:53:27] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-d-eventos
+[02:53:27] pc-d | run_id=s1 cenario=teste rep=1 -> /home/haagen/Documents/repos/Implementando_GCP_local/IoT_setup/dados/teste/s1/rep1/pc-d.csv
+[02:53:27] Aguardando a primeira mensagem (idle-timeout de 15 s comeca a contar nela; Ctrl+C para sair)
+[02:53:32] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:53:37] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:53:42] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:53:47] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:53:52] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:53:57] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:54:02] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:54:07] recebidas: sub-d-gases=0, sub-d-eventos=0
+[02:54:12] recebidas: sub-d-gases=8, sub-d-eventos=9
+[02:54:17] recebidas: sub-d-gases=26, sub-d-eventos=25
+[02:54:22] recebidas: sub-d-gases=42, sub-d-eventos=42
+[02:54:27] recebidas: sub-d-gases=60, sub-d-eventos=59
+[02:54:32] recebidas: sub-d-gases=67, sub-d-eventos=66
+[02:54:37] recebidas: sub-d-gases=67, sub-d-eventos=66
+[02:54:42] recebidas: sub-d-gases=67, sub-d-eventos=66
+[02:54:45] Encerrado (idle-timeout).
+[02:54:45]   sub-d-gases: 67 mensagens gravadas
+[02:54:45]   sub-d-eventos: 66 mensagens gravadas
+[02:54:45]   ignoradas (outro run_id): 0
+[02:54:45]   CSV: /home/haagen/Documents/repos/Implementando_GCP_local/IoT_setup/dados/teste/s1/rep1/pc-d.csv (133 linhas)

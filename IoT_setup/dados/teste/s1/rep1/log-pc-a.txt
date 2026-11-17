@@ -1,0 +1,11 @@
+[02:54:09] PC A | run_id=s1 cenario=teste rep=1 | 10 msgs/s por 20 s = 200 mensagens em ['ambiente', 'gases', 'eventos']
+[02:54:09] CSV: D:\repos\Implementando_GCP_local\IoT_setup\dados\teste\s1\rep1\pc-a.csv
+[02:54:14] publicadas 51/200 (confirmadas 50, erros 0)
+[02:54:19] publicadas 101/200 (confirmadas 100, erros 0)
+[02:54:24] publicadas 151/200 (confirmadas 150, erros 0)
+[02:54:29] Aguardando confirmacoes do servidor...
+[02:54:29] Resumo:
+[02:54:29]   enviadas: 200 | confirmadas: 200 | erros: 0
+[02:54:29]   taxa alvo: 10 msgs/s | taxa real: 10.000 msgs/s em 19.90 s
+[02:54:29]   envios com atraso > 1 intervalo: 0
+[02:54:29]   CSV: D:\repos\Implementando_GCP_local\IoT_setup\dados\teste\s1\rep1\pc-a.csv (200 linhas)
