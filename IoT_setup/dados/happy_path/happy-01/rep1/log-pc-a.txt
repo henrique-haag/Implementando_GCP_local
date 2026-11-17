@@ -1,0 +1,21 @@
+[03:53:18] PC A | run_id=happy-01 cenario=happy_path rep=1 | 20 msgs/s por 70 s = 1400 mensagens em ['ambiente', 'gases', 'eventos']
+[03:53:18] CSV: D:\repos\Implementando_GCP_local\IoT_setup\dados\happy_path\happy-01\rep1\pc-a.csv
+[03:53:23] publicadas 101/1400 (confirmadas 100, erros 0)
+[03:53:28] publicadas 201/1400 (confirmadas 200, erros 0)
+[03:53:33] publicadas 301/1400 (confirmadas 300, erros 0)
+[03:53:38] publicadas 401/1400 (confirmadas 400, erros 0)
+[03:53:43] publicadas 501/1400 (confirmadas 500, erros 0)
+[03:53:48] publicadas 601/1400 (confirmadas 600, erros 0)
+[03:53:53] publicadas 701/1400 (confirmadas 700, erros 0)
+[03:53:58] publicadas 801/1400 (confirmadas 800, erros 0)
+[03:54:03] publicadas 901/1400 (confirmadas 900, erros 0)
+[03:54:08] publicadas 1001/1400 (confirmadas 1000, erros 0)
+[03:54:13] publicadas 1101/1400 (confirmadas 1100, erros 0)
+[03:54:18] publicadas 1201/1400 (confirmadas 1200, erros 0)
+[03:54:23] publicadas 1301/1400 (confirmadas 1300, erros 0)
+[03:54:27] Aguardando confirmacoes do servidor...
+[03:54:28] Resumo:
+[03:54:28]   enviadas: 1400 | confirmadas: 1400 | erros: 0
+[03:54:28]   taxa alvo: 20 msgs/s | taxa real: 20.000 msgs/s em 69.95 s
+[03:54:28]   envios com atraso > 1 intervalo: 0
+[03:54:28]   CSV: D:\repos\Implementando_GCP_local\IoT_setup\dados\happy_path\happy-01\rep1\pc-a.csv (1400 linhas)

@@ -1,0 +1,65 @@
+pc: pc-a
+cenario: happy_path | run_id: happy-01 | rep: 3 | taxa: 20 | duracao: 70
+hostname: DESKTOP-hhaag
+so: MINGW64_NT-10.0-26200 DESKTOP-hhaag 3.6.10-710e5275.x86_64 2026-07-28 09:32 UTC x86_64 Msys
+windows: Microsoft Windows [Version 10.0.26200.9711]
+python: Python 3.14.7
+inicio (utc): 2026-11-17T06:57:29Z
+
+== offset do relogio (inicio) ==
+Tracking time.google.com [[2001:4860:4806::]:123].
+Collecting 5 samples.
+The current time is 2026-11-17 03:57:29.
+03:57:29, +00.0417090s
+03:57:31, +00.0399100s
+03:57:33, +00.0399630s
+03:57:35, +00.0424256s
+03:57:37, +00.0387078s
+
+== pip freeze ==
+certifi==2026.10.23
+cffi==2.1.1
+charset-normalizer==3.5.2
+contourpy==1.4.0
+cryptography==50.0.2
+cycler==0.12.1
+fonttools==4.68.0
+google-api-core==2.44.0
+google-auth==2.62.2
+google-cloud-pubsub==2.44.0
+googleapis-common-protos==1.76.0
+grpc-google-iam-v1==0.14.6
+grpcio==1.85.1
+grpcio-status==1.85.1
+idna==3.20
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.5
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2
+opentelemetry-semantic-conventions==0.66b2
+packaging==26.3
+pandas==3.1.1
+pillow==13.0.0
+proto-plus==1.29.0
+protobuf==7.36.2
+pyasn1==0.6.5
+pyasn1_modules==0.4.2
+pycparser==3.12
+pyparsing==3.3.3
+python-dateutil==4.0.0
+requests==2.34.2
+typing_extensions==4.16.0
+tzdata==2026.6
+urllib3==2.8.0
+
+fim (utc): 2026-11-17T06:59:11Z
+== offset do relogio (fim) ==
+Tracking time.google.com [[2001:4860:4806::]:123].
+Collecting 5 samples.
+The current time is 2026-11-17 03:59:11.
+03:59:11, +00.0380505s
+03:59:13, +00.0398845s
+03:59:15, +00.0365580s
+03:59:17, +00.0394655s
+03:59:19, +00.0391128s
