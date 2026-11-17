@@ -1,0 +1,35 @@
+[03:52:32] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-d-gases
+[03:52:32] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-d-eventos
+[03:52:32] pc-d | run_id=happy-01 cenario=happy_path rep=1 -> /home/haagen/Documents/repos/Implementando_GCP_local/IoT_setup/dados/happy_path/happy-01/rep1/pc-d.csv
+[03:52:32] Aguardando a primeira mensagem (idle-timeout de 15 s comeca a contar nela; Ctrl+C para sair)
+[03:52:37] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:52:42] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:52:48] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:52:53] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:52:58] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:53:03] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:53:08] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:53:13] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:53:18] recebidas: sub-d-gases=0, sub-d-eventos=0
+[03:53:23] recebidas: sub-d-gases=31, sub-d-eventos=31
+[03:53:28] recebidas: sub-d-gases=64, sub-d-eventos=64
+[03:53:33] recebidas: sub-d-gases=99, sub-d-eventos=99
+[03:53:38] recebidas: sub-d-gases=131, sub-d-eventos=131
+[03:53:43] recebidas: sub-d-gases=165, sub-d-eventos=164
+[03:53:48] recebidas: sub-d-gases=199, sub-d-eventos=198
+[03:53:53] recebidas: sub-d-gases=232, sub-d-eventos=232
+[03:53:58] recebidas: sub-d-gases=266, sub-d-eventos=266
+[03:54:03] recebidas: sub-d-gases=300, sub-d-eventos=299
+[03:54:08] recebidas: sub-d-gases=332, sub-d-eventos=332
+[03:54:13] recebidas: sub-d-gases=366, sub-d-eventos=366
+[03:54:18] recebidas: sub-d-gases=399, sub-d-eventos=398
+[03:54:23] recebidas: sub-d-gases=432, sub-d-eventos=432
+[03:54:28] recebidas: sub-d-gases=466, sub-d-eventos=466
+[03:54:33] recebidas: sub-d-gases=467, sub-d-eventos=466
+[03:54:38] recebidas: sub-d-gases=467, sub-d-eventos=466
+[03:54:43] recebidas: sub-d-gases=467, sub-d-eventos=466
+[03:54:43] Encerrado (idle-timeout).
+[03:54:43]   sub-d-gases: 467 mensagens gravadas
+[03:54:43]   sub-d-eventos: 466 mensagens gravadas
+[03:54:43]   ignoradas (outro run_id): 0
+[03:54:43]   CSV: /home/haagen/Documents/repos/Implementando_GCP_local/IoT_setup/dados/happy_path/happy-01/rep1/pc-d.csv (933 linhas)
