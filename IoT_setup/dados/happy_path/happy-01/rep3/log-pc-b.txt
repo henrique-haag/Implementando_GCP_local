@@ -1,0 +1,36 @@
+/home/user/Documents/repos/.gcp_2/lib/python3.12/site-packages/google/auth/_default.py:113: UserWarning: Your application has authenticated using end user credentials from Google Cloud SDK without a quota project. You might receive a "quota exceeded" or "API not enabled" error. See the following page for troubleshooting: https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds. 
+  warnings.warn(_CLOUD_SDK_CREDENTIALS_WARNING)
+[03:57:06] Ouvindo projects/teste-pub-sub-515002/subscriptions/sub-b-ambiente
+[03:57:06] pc-b | run_id=happy-01 cenario=happy_path rep=3 -> /home/user/Documents/repos/Implementando_GCP_local/IoT_setup/dados/happy_path/happy-01/rep3/pc-b.csv
+[03:57:06] Aguardando a primeira mensagem (idle-timeout de 15 s comeca a contar nela; Ctrl+C para sair)
+[03:57:11] recebidas: sub-b-ambiente=0
+[03:57:16] recebidas: sub-b-ambiente=0
+[03:57:21] recebidas: sub-b-ambiente=0
+[03:57:26] recebidas: sub-b-ambiente=0
+[03:57:31] recebidas: sub-b-ambiente=0
+[03:57:36] recebidas: sub-b-ambiente=0
+[03:57:41] recebidas: sub-b-ambiente=0
+[03:57:46] recebidas: sub-b-ambiente=0
+[03:57:51] recebidas: sub-b-ambiente=0
+[03:57:56] recebidas: sub-b-ambiente=0
+[03:58:01] recebidas: sub-b-ambiente=3
+[03:58:06] recebidas: sub-b-ambiente=39
+[03:58:12] recebidas: sub-b-ambiente=73
+[03:58:17] recebidas: sub-b-ambiente=106
+[03:58:22] recebidas: sub-b-ambiente=140
+[03:58:27] recebidas: sub-b-ambiente=173
+[03:58:32] recebidas: sub-b-ambiente=206
+[03:58:37] recebidas: sub-b-ambiente=240
+[03:58:42] recebidas: sub-b-ambiente=273
+[03:58:47] recebidas: sub-b-ambiente=307
+[03:58:52] recebidas: sub-b-ambiente=340
+[03:58:57] recebidas: sub-b-ambiente=373
+[03:59:02] recebidas: sub-b-ambiente=407
+[03:59:07] recebidas: sub-b-ambiente=440
+[03:59:12] recebidas: sub-b-ambiente=467
+[03:59:17] recebidas: sub-b-ambiente=467
+[03:59:22] recebidas: sub-b-ambiente=467
+[03:59:26] Encerrado (idle-timeout).
+[03:59:26]   sub-b-ambiente: 467 mensagens gravadas
+[03:59:26]   ignoradas (outro run_id): 0
+[03:59:26]   CSV: /home/user/Documents/repos/Implementando_GCP_local/IoT_setup/dados/happy_path/happy-01/rep3/pc-b.csv (467 linhas)
